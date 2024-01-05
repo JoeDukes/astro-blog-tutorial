@@ -1,14 +1,66 @@
-html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
-  }
-  
+:root {
+  --background-color: #EEE7DA; /* Light grey background */
+  --primary-color: #88AB8E; /* Blue */
+  --secondary-color: #AFC8AD; /* Green */
+  --accent-color: #BF3131; /* Red */
+  --text-color: #607274; /* Dark grey text color */
+  --link-color: #607274; /* Dark blue for links */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+/* Example usage of colors for different elements */
+h1 {
+  color: var(--primary-color);
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--secondary-color);
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+.alert {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Additional styles as needed */
+ 
   body {
     margin: 0 auto;
     width: 100%;
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
+    background-color: var(--background-color);
   }
   
   * {
@@ -18,8 +70,12 @@ html {
   h1 {
     margin: 1rem 0;
     font-size: 4rem;
-    color: purple;
+    color: var(--primary-color);
   }
+
+.blog-title {
+  text-align: center;
+}
 
 /* nav styles */
 .hamburger {
@@ -32,14 +88,14 @@ html {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: var(--background-color);
 }
 
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: var(--background-color);
   display: none;
   margin: 0;
 }
@@ -56,7 +112,7 @@ html {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: var(--secondary-color);
 }
 
 .expanded {
