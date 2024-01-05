@@ -1,18 +1,14 @@
 ---
 import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Baselayout from '../layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
-<Header />
-
-<div class='blog-title'>
-    <h1>{frontmatter.title}</h1>
+<Baselayout pageTitle={frontmatter.title}>
+<div class='title'>
     <img src={frontmatter.image.url} width="200" alt={frontmatter.image.alt} />
     <p><em>{frontmatter.description}</em></p>
     <p>{frontmatter.author} | {frontmatter.pubDate.slice(0,10)}</p>
     <hr>
 </div>
-
 <slot />
-<Footer />
+</Baselayout>
