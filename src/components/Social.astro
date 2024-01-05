@@ -1,7 +1,7 @@
 ---
-const { platform, username } = Astro.props;
+const { platform, icon, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`}><span class={`fa ${icon} fa-2x`} aria-hidden="true" title={`${platform} external link`}></span></a>
 
 <style>
     a {

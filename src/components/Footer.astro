@@ -1,20 +1,9 @@
 ---
 import Social from './Social.astro';
 ---
-<style>
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-</style>
-
 <footer>
-    <img src='https://docs.astro.build/assets/full-logo-light.png' width="150" alt='The full Astro logo.' />
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
+  <img src='https://docs.astro.build/assets/full-logo-light.png' width="150" alt='The full Astro logo.' />
+  <Social platform="twitter" icon="fa-twitter-square" username="astrodotbuild" />
+  <Social platform="github" icon="fa-github" username="withastro" />
+  <Social platform="youtube" icon="fa-youtube-play" username="astrodotbuild" />
 </footer>
-
