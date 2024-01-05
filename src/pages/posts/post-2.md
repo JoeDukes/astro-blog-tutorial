@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My Second Blog Post'
+title: 'More Astro Tutorial'
 author: 'S1oop'
 description: "After learning some Astro, I couldn't stop!"
 image:
