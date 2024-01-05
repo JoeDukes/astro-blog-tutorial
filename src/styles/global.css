@@ -117,14 +117,13 @@ h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* nav styles */
+/* HEADER styles */
 .hamburger {
-  padding-right: 20px;
   cursor: pointer;
 }
 
 .hamburger .line {
-  display: block;
+  display: flex;
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
@@ -134,16 +133,15 @@ h2, h3, h4, h5, h6 {
 .nav-links {
   width: 100%;
   top: 5rem;
-  left: 48px;
   background-color: var(--background-color);
   display: none;
   margin: 0;
 }
 
 .nav-links a {
-  display: block;
+  display: flex;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 5px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -153,6 +151,7 @@ h2, h3, h4, h5, h6 {
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: var(--secondary-color);
+  border-radius: 5px;
 }
 
 .expanded {
