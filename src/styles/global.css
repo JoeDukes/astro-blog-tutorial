@@ -31,27 +31,9 @@ h2, h3, h4, h5, h6 {
   color: var(--secondary-color);
 }
 
-.button {
-  background-color: var(--secondary-color);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .button:hover {
   background-color: #27ae60; /* Darker green on hover */
 }
-
-.alert {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Additional styles as needed */
  
   body {
     margin: 0 auto;
@@ -107,6 +89,11 @@ h2, h3, h4, h5, h6 {
     color: var(--primary-color);
   }
 
+.meta {
+  text-align: center;
+  border-bottom: solid var(--secondary-color);
+}
+
 .title {
   text-align: center;
 }
@@ -117,7 +104,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .social {
-  border-radius: 5px;
+  border-radius: .5rem;
 }
 
 a.social {
@@ -129,6 +116,29 @@ a.social {
 
 a:hover.social {
   color: var(--accent-color);
+}
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tag {
+  margin: 0.25em;
+  border: none;
+  border-radius: .5rem;
+  padding: .5em 1em;
+  font-size: 1.15em;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+a.tag {
+  text-decoration: none;
+}
+
+.title > .tags > .tag {
+  justify-content: center;
 }
 
 /* HEADER styles */
@@ -165,7 +175,7 @@ a:hover.social {
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: var(--secondary-color);
-  border-radius: 5px;
+  border-radius: .5rem;
 }
 
 .expanded {

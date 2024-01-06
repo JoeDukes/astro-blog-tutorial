@@ -4,11 +4,15 @@ import Baselayout from '../layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <Baselayout pageTitle={frontmatter.title}>
-<div class='title'>
+<div class='meta'>
     <img src={frontmatter.image.url} width="200" alt={frontmatter.image.alt} />
     <p><em>{frontmatter.description}</em></p>
     <p>{frontmatter.author} | {frontmatter.pubDate.slice(0,10)}</p>
-    <hr>
+        <p>
+            {frontmatter.tags.map((tag) => (
+                <a class="tag" href={`/tags/${tag}`}>{tag}</a>
+            ))}
+        </p>
 </div>
 <slot />
 </Baselayout>
