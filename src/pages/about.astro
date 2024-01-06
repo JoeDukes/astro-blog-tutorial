@@ -25,9 +25,9 @@ const goal = 3;
 		}
 		</ul>
 		<p>My skills are:</p>
-		<ul>
-		{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</ul>
+		<div class="skills">
+		{skills.map((skill) => <span class="skill">{skill}</span>)}
+		</div>
 
 		{happy && <p>I am happy to be learning Astro!</p>}
 

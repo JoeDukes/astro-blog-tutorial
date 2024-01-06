@@ -1,10 +1,18 @@
 :root {
-  --background-color: #EEE7DA; /* Light grey background */
-  --primary-color: #88AB8E; /* Blue */
-  --secondary-color: #AFC8AD; /* Green */
-  --accent-color: #BF3131; /* Red */
-  --text-color: #607274; /* Dark grey text color */
-  --link-color: #607274; /* Dark blue for links */
+  /* Light Theme */
+  --background-color: #EEE7DA;
+  --primary-color: #88AB8E;
+  --secondary-color: #AFC8AD;
+  --accent-color: #BF3131;
+  --text-color: #607274;
+  --link-color: #607274;
+  /* Dark Theme */
+  --background-dark: #45474B; /* #607274; */
+  --primary-dark: #88AB8E;
+  --secondary-dark: #EEE7DA;
+  --accent-dark: #BF3131;
+  --text-dark: #EEE7DA;
+  --link-dark: #EEE7DA;
 }
 
 body {
@@ -13,9 +21,18 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.dark body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
 a {
   color: var(--link-color);
   text-decoration: underline;
+}
+
+.dark a {
+  color: var(--link-dark);
 }
 
 a:hover {
@@ -23,16 +40,24 @@ a:hover {
   color: var(--accent-color);
 }
 
+.dark a:hover {
+  color: var(--accent-dark);
+}
+
 h1 {
   color: var(--primary-color);
+}
+
+.dark h1 {
+  color: var(--primary-dark);
 }
 
 h2, h3, h4, h5, h6 {
   color: var(--secondary-color);
 }
 
-.button:hover {
-  background-color: #27ae60; /* Darker green on hover */
+.dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--secondary-dark);
 }
  
   body {
@@ -41,7 +66,6 @@ h2, h3, h4, h5, h6 {
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
-    background-color: var(--background-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,6 +82,11 @@ h2, h3, h4, h5, h6 {
     padding-bottom: 1rem;
   }
 
+  .dark header {
+    border-top: 2px solid var(--secondary-dark);
+    border-bottom: 2px solid var(--secondary-dark);
+  }
+
   footer {
     display: flex;
     gap: 1rem;
@@ -70,12 +99,22 @@ h2, h3, h4, h5, h6 {
     padding-bottom: 1rem;
   }
 
+  .dark footer {
+    border-top: 2px solid var(--secondary-dark);
+    border-bottom: 2px solid var(--secondary-dark);
+  }
+
   slot {
     flex: 1 100%;
   }
   
   hr {
     color: var(--text-color);
+    width: 100%;
+  }
+
+  .dark hr {
+    color: var(--text-dark);
     width: 100%;
   }
 
@@ -89,18 +128,46 @@ h2, h3, h4, h5, h6 {
     color: var(--primary-color);
   }
 
+  .dark h1 {
+    color: var(--primary-dark);
+  }
+
 .meta {
   text-align: center;
   border-bottom: solid var(--secondary-color);
+}
+
+.dark .meta {
+  border-bottom: solid var(--secondary-dark);
 }
 
 .title {
   text-align: center;
 }
 
-.skill {
+.skills {
+  display: flex;
+  flex-flow: row wrap;
   color: var(--accent-color);
   font-weight: bold;
+}
+
+.skill {
+  width: fit-content;
+  padding: .25rem;
+  border: none;
+  border-radius: .5rem;
+  margin: .25rem;
+  background-color: var(--secondary-color);
+}
+
+.dark .skill {
+  width: fit-content;
+  padding: .25rem;
+  border: none;
+  border-radius: .5rem;
+  margin: .25rem;
+  color: var(--accent-dark);
 }
 
 .social {
@@ -114,8 +181,17 @@ a.social {
   text-decoration: none;
 }
 
+.dark a.social {
+  color: var(--background-dark);
+  background-color: var(--secondary-dark);
+}
+
 a:hover.social {
   color: var(--accent-color);
+}
+
+.dark a:hover.social {
+  color: var(--accent-dark);
 }
 
 .tags {
@@ -131,6 +207,11 @@ a:hover.social {
   font-size: 1.15em;
   background-color: var(--primary-color);
   color: var(--background-color);
+}
+
+.dark .tag {
+  background-color: var(--primary-dark);
+  color: var(--background-dark);
 }
 
 a.tag {
@@ -154,12 +235,20 @@ a.tag {
   background-color: var(--text-color);
 }
 
+.dark .hamburger .line {
+  background-color: var(--text-dark);
+}
+
 .nav-links {
   width: 100%;
   top: 5rem;
   background-color: var(--background-color);
   display: none;
   margin: 0;
+}
+
+.dark .nav-links {
+  background-color: var(--background-dark);
 }
 
 .nav-links a {
@@ -176,6 +265,11 @@ a.tag {
 .nav-links a:focus {
   background-color: var(--secondary-color);
   border-radius: .5rem;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
+  background-color: var(--secondary-dark);
 }
 
 .expanded {
