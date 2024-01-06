@@ -12,7 +12,7 @@ const identity = {
 const skills = ["C#", "SQL", "HTML 5", "CSS 3", "JS ES6", "Node", "nHibernate", "Razor", "Postman", "VS / VS Code", "SSMS", "MVC", "EF"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -33,5 +33,5 @@ const goal = 3;
 
 		{finished && <p>I finished this tutorial!</p>}
 
-		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+		{goal === 3 ? <p>My goal is to finish in 3 weeks.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>
