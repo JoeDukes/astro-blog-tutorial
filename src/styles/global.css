@@ -116,6 +116,21 @@ h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+.social {
+  border-radius: 5px;
+}
+
+a.social {
+  padding: 0.5rem 1rem;
+  color: var(--background-color);
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover.social {
+  color: var(--accent-color);
+}
+
 /* HEADER styles */
 .hamburger {
   cursor: pointer;

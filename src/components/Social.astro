@@ -1,17 +1,4 @@
 ---
 const { platform, icon, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}><span class={`fa ${icon} fa-2x`} aria-hidden="true" title={`${platform} external link`}></span></a>
-
-<style>
-    a {
-      padding: 0.5rem 1rem;
-      color: #EEE7DA;
-      background-color: #AFC8AD;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #BF3131;
-    }
-</style>
+<a class="social" href={`https://www.${platform}.com/${username}`}><span class={`fa ${icon} fa-2x`} aria-hidden="true" title={`${platform} external link`}></span></a>
