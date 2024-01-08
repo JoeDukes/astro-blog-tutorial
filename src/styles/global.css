@@ -28,7 +28,7 @@ body {
 
 a {
   color: var(--link-color);
-  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 .dark a {
